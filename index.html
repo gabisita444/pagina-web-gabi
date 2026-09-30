@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriela Jiménez | ¡Hola, soy Gabi! 💜</title>
+  
+  <!-- Google Fonts: Outfit & Caveat & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Canvas para la lluvia de corazones morados -->
+  <canvas id="hearts-canvas"></canvas>
+
+  <!-- Fondo ambiental suave en morados claros y lavanda -->
+  <div class="pastel-ambient-bg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Barra de Navegación Limpia y Elegante -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-box">GJ</span>
+        <span class="logo-text">Gabi Jiménez</span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="#conoceme" class="nav-link"><i class="fa-solid fa-sparkles"></i> Conóceme</a>
+        <a href="#gustos" class="nav-link"><i class="fa-solid fa-heart"></i> Mis Gustos</a>
+        <a href="#peliculas-series" class="nav-link"><i class="fa-solid fa-film"></i> Películas & Series</a>
+        <a href="#gente-querida" class="nav-link"><i class="fa-solid fa-user-group"></i> Gente que Quiero</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Botón GJ en la barra de navegación -->
+        <button class="gj-mini-btn trigger-hearts" title="¡Lanza corazones morados!">
+          <span>GJ</span> 💜
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN PRINCIPAL / HERO (Limpia, Delicada y Sencilla) -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      
+      <!-- Contenido Textual Hero Simplificado -->
+      <div class="hero-content">
+        <div class="soft-pill">
+          <span class="pill-sparkle">✨</span>
+          <span>Mi espacio personal</span>
+        </div>
+
+        <h1 class="hero-title">
+          ¡Hola, soy <span class="gradient-text">Gabi</span>! 💜
+        </h1>
+
+        <p class="hero-bio">
+          Soy <strong>Gabriela Jiménez</strong>. Estudio en el colegio <strong>María Currea Manrique</strong> en <strong>grado 11</strong> y mi sueño es estudiar <strong>psicología</strong>. Te doy la bienvenida a mi rincón favorito en tonos lila y lavanda.
+        </p>
+
+        <!-- BOTÓN INTERACTIVO "GJ" PRINCIPAL -->
+        <div class="gj-interactive-card">
+          <div class="gj-btn-cluster">
+            <button class="gj-circle-btn trigger-hearts" id="main-gj-button" title="¡Haz clic!">
+              <span class="btn-ripple"></span>
+              <span class="gj-label">GJ</span>
+              <span class="floating-emoji">💜</span>
+            </button>
+            <div class="gj-text-meta">
+              <strong>Toca el botón GJ</strong>
+              <p>Haz clic para llenar la pantalla de corazones morados</p>
+            </div>
+          </div>
+
+          <!-- Contador sutil de corazones -->
+          <div class="heart-pill-counter">
+            <span class="counter-text"><i class="fa-solid fa-heart"></i> Corazones morados:</span>
+            <span class="counter-badge" id="heart-counter">0</span>
+            <span class="counter-message" id="counter-status">¡Tócame!</span>
+          </div>
+        </div>
+
+        <!-- Botones de navegación sencillos -->
+        <div class="hero-actions">
+          <a href="#conoceme" class="btn btn-soft-purple">
+            <span>Conóceme</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <a href="#gente-querida" class="btn btn-outline-lilac">
+            <span>Mi Gente Querida</span>
+            <i class="fa-solid fa-heart"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen Principal de Gabi (Estilo estético, minimalista y limpio) -->
+      <div class="hero-visual">
+        <div class="portrait-card">
+          <div class="portrait-frame">
+            <img src="assets/img/gabi-principal.jpg" alt="Foto de Gabriela Jiménez" class="portrait-img" id="hero-img">
+            <div class="portrait-tag">
+              <span class="online-indicator"></span>
+              <span>Gabriela Jiménez ✨</span>
+            </div>
+          </div>
+          
+          <!-- Botón sutil para alternar foto -->
+          <div class="portrait-switcher">
+            <button class="switch-chip active" data-src="assets/img/gabi-principal.jpg">
+              <i class="fa-solid fa-user"></i> Mi foto
+            </button>
+            <button class="switch-chip" data-src="assets/img/gabi-perrito.jpg">
+              <i class="fa-solid fa-paw"></i> Con mi perrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CONÓCEME -->
+  <section class="section section-about" id="conoceme">
+    <div class="container">
+      <div class="section-heading">
+        <span class="sub-badge"><i class="fa-solid fa-sparkles"></i> Un poco sobre mí</span>
+        <h2>Conóceme</h2>
+        <div class="soft-divider"></div>
+        <p>Los tres pilares esenciales de mi presente y de mis sueños para el futuro.</p>
+      </div>
+
+      <div class="about-cards-grid">
+        <!-- Tarjeta 1: Soy Gabriela Jiménez -->
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-smile-beam"></i></div>
+          <h3>Soy Gabriela Jiménez</h3>
+          <p class="highlight-text">Auténtica, alegre y con un gran corazón para quienes me rodean.</p>
+          <p>
+            Me considero una persona sencilla, de buen humor y muy leal. Disfruto los momentos de tranquilidad, las charlas sinceras y valorar a cada una de las personas importantes que forman parte de mi día a día.
+          </p>
+          <div class="cute-tags">
+            <span>💜 100% Gabi</span>
+            <span>✨ Buena Vibra</span>
+            <span>🌸 Genuina</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Colegio y Grado 11 -->
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>María Currea Manrique · Grado 11</h3>
+          <p class="highlight-text">Culminando mi último año escolar con los mejores recuerdos.</p>
+          <p>
+            Actualmente curso grado once en el colegio María Currea Manrique. Es una etapa hermosa llena de metas, risas compartidas con amigos y la satisfacción de cerrar un gran ciclo para comenzar mi camino universitario.
+          </p>
+          <div class="meta-stats-row">
+            <div class="mini-stat">
+              <strong>11°</strong>
+              <span>Grado</span>
+            </div>
+            <div class="mini-stat">
+              <strong>MCM</strong>
+              <span>Colegio</span>
+            </div>
+            <div class="mini-stat">
+              <strong>2026</strong>
+              <span>Graduación</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Quiero Estudiar Psicología -->
+        <div class="info-card featured-vocation">
+          <div class="top-vocation-tag">Mi Vocación 💭</div>
+          <div class="info-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Quiero estudiar Psicología</h3>
+          <p class="highlight-text">Comprender las emociones y acompañar a otros con empatía.</p>
+          <p>
+            Desde siempre me ha fascinado cómo funciona la mente humana, escuchar sin juzgar y brindar apoyo emocional. Siento una vocación profunda por la salud mental y quiero prepararme para ser una excelente profesional.
+          </p>
+          <ul class="vocation-list">
+            <li><i class="fa-solid fa-check"></i> Escucha activa y cercanía humana</li>
+            <li><i class="fa-solid fa-check"></i> Compromiso con la salud mental</li>
+            <li><i class="fa-solid fa-check"></i> Vocación de servicio y comprensión</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: MIS GUSTOS -->
+  <section class="section section-likes" id="gustos">
+    <div class="container">
+      <div class="section-heading">
+        <span class="sub-badge"><i class="fa-solid fa-heart"></i> Mi Personalidad</span>
+        <h2>Mis Gustos & Cosas que Amo</h2>
+        <div class="soft-divider"></div>
+        <p>Las pequeñas cosas que hacen mis días felices... y lo que definitivamente no tolero.</p>
+      </div>
+
+      <div class="likes-aesthetic-grid">
+        
+        <!-- Gusto 1: Me gustan los animales -->
+        <div class="like-box">
+          <div class="like-box-head">
+            <span class="like-emoji-icon">🐾</span>
+            <span class="like-type-tag">Amor Incondicional</span>
+          </div>
+          <div class="like-preview-img">
+            <img src="assets/img/gabi-perrito.jpg" alt="Gabi con perrito">
+          </div>
+          <h3>Me gustan los animales</h3>
+          <p>
+            Perritos, gatitos y cualquier peludito tienen mi corazón entero. Su ternura y fidelidad me llenan de paz y me sacan una sonrisa en cualquier momento.
+          </p>
+        </div>
+
+        <!-- Gusto 2: Comer helado -->
+        <div class="like-box">
+          <div class="like-box-head">
+            <span class="like-emoji-icon">🍦</span>
+            <span class="like-type-tag">Mi Favorito</span>
+          </div>
+          <div class="icecream-art">
+            <span class="huge-icecream">🍨</span>
+          </div>
+          <h3>Comer Helado</h3>
+          <p>
+            ¡Mi postre favorito en el mundo! Cualquier tarde mejora con una copa o un cono de helado refrescante. Probar sabores dulces y cremosos es un plan que nunca rechazo.
+          </p>
+          <div class="flavors-pills">
+            <span>Cookies & Cream</span>
+            <span>Chocolate</span>
+            <span>Vainilla</span>
+          </div>
+        </div>
+
+        <!-- LO QUE ODIO: El Calor -->
+        <div class="like-box cold-theme-box">
+          <div class="like-box-head">
+            <span class="like-emoji-icon">❄️</span>
+            <span class="hate-type-tag">¡100% Team Frío!</span>
+          </div>
+          <div class="weather-meter">
+            <div class="weather-side winter">
+              <span>❄️ Frío: 100%</span>
+            </div>
+            <div class="weather-vs">vs</div>
+            <div class="weather-side summer">
+              <span>☀️ Calor: 0%</span>
+            </div>
+          </div>
+          <h3>Odio el Calor</h3>
+          <p>
+            El bochorno y las temperaturas altas no van conmigo. Prefiero mil veces los días frescos, la lluvia suave, la ropa abrigada y una cobija calientita con una buena serie.
+          </p>
+        </div>
+
+        <!-- Gusto 4: Me gusta viajar -->
+        <div class="like-box">
+          <div class="like-box-head">
+            <span class="like-emoji-icon">✈️</span>
+            <span class="like-type-tag">Aventuras</span>
+          </div>
+          <div class="travel-graphic">
+            <i class="fa-solid fa-earth-americas globe-icon"></i>
+            <span class="destiny-text">Nuevos Lugares & Recuerdos</span>
+          </div>
+          <h3>Me gusta viajar</h3>
+          <p>
+            Conocer lugares nuevos, cambiar de ambiente, respirar aire fresco y crear recuerdos inolvidables con mi gente favorita recarga al 100% mi energía.
+          </p>
+        </div>
+
+        <!-- Gusto 5: Películas y Series Preview -->
+        <div class="like-box span-wide-box">
+          <div class="cinema-preview-wrapper">
+            <div class="cinema-text">
+              <div class="like-box-head">
+                <span class="like-emoji-icon">🎬</span>
+                <span class="like-type-tag">Mi Escape Favorito</span>
+              </div>
+              <h3>Me gustan las películas y series</h3>
+              <p>
+                Un fin de semana perfecto siempre tiene palomitas de maíz y una buena maratón. Me atrapan las historias de confort, misterios bien construidos y tramas emotivas que dejan una enseñanza bonita.
+              </p>
+              <a href="#peliculas-series" class="btn btn-outline-lilac btn-sm">
+                <span>Ver mis series y películas favoritas</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="cinema-tags-column">
+              <span class="cin-badge"><i class="fa-solid fa-coffee"></i> Series de confort</span>
+              <span class="cin-badge"><i class="fa-solid fa-magnifying-glass"></i> Misterio y suspenso</span>
+              <span class="cin-badge"><i class="fa-solid fa-heart"></i> Dramas conmovedores</span>
+              <span class="cin-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Historias mágicas</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PELÍCULAS Y SERIES -->
+  <section class="section section-entertainment" id="peliculas-series">
+    <div class="container">
+      <div class="section-heading">
+        <span class="sub-badge"><i class="fa-solid fa-popcorn"></i> En Pantalla</span>
+        <h2>Películas & Series que me gustan</h2>
+        <div class="soft-divider"></div>
+        <p>Mis títulos favoritos para maratonear una y otra vez con una mantita y palomitas.</p>
+      </div>
+
+      <!-- Filtros sencillos -->
+      <div class="category-filter-bar">
+        <button class="filter-chip active" data-filter="all">Todas</button>
+        <button class="filter-chip" data-filter="series"><i class="fa-solid fa-tv"></i> Series</button>
+        <button class="filter-chip" data-filter="peliculas"><i class="fa-solid fa-film"></i> Películas</button>
+        <button class="filter-chip" data-filter="favoritas"><i class="fa-solid fa-star"></i> Top Favoritas 💜</button>
+      </div>
+
+      <!-- Grid de Películas y Series -->
+      <div class="shows-grid">
+        
+        <!-- Gilmore Girls -->
+        <div class="show-card" data-category="series favoritas">
+          <div class="show-type-pill series">Serie</div>
+          <div class="show-cover cover-gilmore">
+            <span class="show-emoji">☕🍂</span>
+          </div>
+          <div class="show-body">
+            <span class="show-genre">Drama / Comedia · 7 Temporadas</span>
+            <h4>Gilmore Girls</h4>
+            <p>La máxima vibra de confort. Ideal para días fríos, tardes lluviosas y disfrutar de una taza caliente.</p>
+            <div class="personal-note">
+              <span>"Mi lugar seguro en días fríos." 💜</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stranger Things -->
+        <div class="show-card" data-category="series">
+          <div class="show-type-pill series">Serie</div>
+          <div class="show-cover cover-stranger">
+            <span class="show-emoji">🚲⚡</span>
+          </div>
+          <div class="show-body">
+            <span class="show-genre">Misterio / Ciencia Ficción · 4 Temps</span>
+            <h4>Stranger Things</h4>
+            <p>Amistad inquebrantable, misterios de los 80s y momentos de mucha emoción e intriga.</p>
+            <div class="personal-note">
+              <span>"¡Amor por las tramas de misterio y amigos leales!"</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intensamente 1 & 2 -->
+        <div class="show-card" data-category="peliculas favoritas">
+          <div class="show-type-pill movie">Película</div>
+          <div class="show-cover cover-insideout">
+            <span class="show-emoji">🧠✨</span>
+          </div>
+          <div class="show-body">
+            <span class="show-genre">Animación / Emocional · Pixar</span>
+            <h4>Intensamente 1 & 2</h4>
+            <p>Una genialidad sobre la psicología humana, las emociones y la importancia de validar lo que sentimos.</p>
+            <div class="personal-note">
+              <span>"¡Me toca el corazón como futura psicóloga!"</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coraline -->
+        <div class="show-card" data-category="peliculas">
+          <div class="show-type-pill movie">Película</div>
+          <div class="show-cover cover-coraline">
+            <span class="show-emoji">🗝️🐈‍⬛</span>
+          </div>
+          <div class="show-body">
+            <span class="show-genre">Fantasía / Misterio · Laika</span>
+            <h4>Coraline</h4>
+            <p>Estética visual oscura, misteriosa y fascinante en tonos violetas y nocturnos.</p>
+            <div class="personal-note">
+              <span>"Su arte y atmósfera son una maravilla."</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anne with an E -->
+        <div class="show-card" data-category="series">
+          <div class="show-type-pill series">Serie</div>
+          <div class="show-cover cover-anne">
+            <span class="show-emoji">👒🌸</span>
+          </div>
+          <div class="show-body">
+            <span class="show-genre">Drama de época · 3 Temporadas</span>
+            <h4>Anne with an E</h4>
+            <p>Una protagonista soñadora, empática y resiliente que transforma su entorno con cariño.</p>
+            <div class="personal-note">
+              <span>"Llena el alma de paz y ternura."</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enola Holmes -->
+        <div class="show-card" data-category="peliculas">
+          <div class="show-type-pill movie">Película</div>
+          <div class="show-cover cover-enola">
+            <span class="show-emoji">🔍🕵️‍♀️</span>
+          </div>
+          <div class="show-body">
+            <span class="show-genre">Aventura / Misterio · Netflix</span>
+            <h4>Enola Holmes</h4>
+            <p>Divertida, ágil e inteligente. Una chica que desafía cualquier límite con valentía.</p>
+            <div class="personal-note">
+              <span>"¡Súper entretenida e inspiradora!"</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: MI FAMILIA, MI HERMANO & AMISTADES -->
+  <section class="section section-loved-ones" id="gente-querida">
+    <div class="container">
+      <div class="section-heading">
+        <span class="sub-badge"><i class="fa-solid fa-heart"></i> Mi Gente Bonita</span>
+        <h2>Mi Familia, Mi Hermano & Amistades</h2>
+        <div class="soft-divider"></div>
+        <p>Las personas y momentos que llenan mi vida de amor sincero, risas y compañía incondicional.</p>
+      </div>
+
+      <!-- Filtros para la galería de afectos -->
+      <div class="category-filter-bar loved-filters">
+        <button class="filter-chip active" data-loved="all">Todos mis afectos 💜</button>
+        <button class="filter-chip" data-loved="hermano"><i class="fa-solid fa-hand-peace"></i> Mi Hermano</button>
+        <button class="filter-chip" data-loved="amistades"><i class="fa-solid fa-user-group"></i> Amistades</button>
+        <button class="filter-chip" data-loved="familia"><i class="fa-solid fa-house-chimney-heart"></i> Familia</button>
+      </div>
+
+      <div class="loved-grid">
+
+        <!-- 1. MI HERMANO (Nueva Foto) -->
+        <div class="loved-card special-highlight" data-loved-type="hermano">
+          <div class="loved-photo-box">
+            <img src="assets/img/mi-hermano.jpg" alt="Gabriela con su hermano" class="zoomable-img">
+            <span class="loved-badge brother-badge"><i class="fa-solid fa-hand-peace"></i> Mi Hermano</span>
+          </div>
+          <div class="loved-info">
+            <div class="loved-header-flex">
+              <h3>Mi Hermano</h3>
+              <span class="heart-icon-soft">💜</span>
+            </div>
+            <p class="loved-phrase">"Complicidad, risas y un vínculo que dura para toda la vida."</p>
+            <p class="loved-text">
+              Compartir momentos juntos, bromear, sacarnos fotos graciosas y saber que siempre contamos el uno con el otro. Tener a mi hermano a mi lado es tener un amigo leal en quien confiar siempre.
+            </p>
+            <div class="loved-chips">
+              <span>#Hermano</span>
+              <span>#Complicidad</span>
+              <span>#Incondicional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. AMISTADES (Nueva Foto con amiga en tienda) -->
+        <div class="loved-card special-highlight" data-loved-type="amistades">
+          <div class="loved-photo-box">
+            <img src="assets/img/amistades-amiga.jpg" alt="Gabriela con su amiga" class="zoomable-img">
+            <span class="loved-badge friends-badge"><i class="fa-solid fa-user-group"></i> Amistades</span>
+          </div>
+          <div class="loved-info">
+            <div class="loved-header-flex">
+              <h3>Amistades que Valen Oro</h3>
+              <span class="heart-icon-soft">✨</span>
+            </div>
+            <p class="loved-phrase">"Las amigas de verdad son el regalo más lindo que da la vida."</p>
+            <p class="loved-text">
+              Las salidas de compras, los selfies en los espejos, las confidencias y los ataques de risa donde no podemos parar. La amistad sincera ilumina cualquier día y hace que cada salida sea inolvidable.
+            </p>
+            <div class="loved-chips">
+              <span>#Amistades</span>
+              <span>#MejoresMomentos</span>
+              <span>#Risas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. AMISTADES (Foto grupal en zapatería) -->
+        <div class="loved-card" data-loved-type="amistades">
+          <div class="loved-photo-box">
+            <img src="assets/img/amigos-momentos.jpg" alt="Momentos con amigos" class="zoomable-img">
+            <span class="loved-badge friends-badge"><i class="fa-solid fa-face-laugh-squint"></i> Amistades</span>
+          </div>
+          <div class="loved-info">
+            <div class="loved-header-flex">
+              <h3>Momentos con Amigos</h3>
+              <span class="heart-icon-soft">🌸</span>
+            </div>
+            <p class="loved-phrase">"Las memorias más divertidas se viven entre amigos."</p>
+            <p class="loved-text">
+              Momentos espontáneos, poses graciosas y recuerdos de colegio que guardo con todo el cariño del mundo. La buena compañía hace que todo sea especial.
+            </p>
+            <div class="loved-chips">
+              <span>#Amigos</span>
+              <span>#Recuerdos</span>
+              <span>#SiempreJuntos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. MIS PAPÁS / FAMILIA -->
+        <div class="loved-card" data-loved-type="familia">
+          <div class="loved-photo-box">
+            <img src="assets/img/familia-padres.jpg" alt="Mis padres y familia" class="zoomable-img">
+            <span class="loved-badge family-badge"><i class="fa-solid fa-house-chimney-heart"></i> Familia</span>
+          </div>
+          <div class="loved-info">
+            <div class="loved-header-flex">
+              <h3>Mis Padres / Familia</h3>
+              <span class="heart-icon-soft">💜</span>
+            </div>
+            <p class="loved-phrase">"Mi mayor bendición y mi pilar seguro."</p>
+            <p class="loved-text">
+              Gracias por su apoyo diario, por celebrar cada uno de mis pasos en grado 11 y animarme con amor a perseguir mi meta de estudiar psicología. Son mi hogar y mi mayor orgullo.
+            </p>
+            <div class="loved-chips">
+              <span>#MisPapás</span>
+              <span>#AmorPuro</span>
+              <span>#MiPilar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. MI CONSENTIDO PELUDO (Gabi con perrito) -->
+        <div class="loved-card" data-loved-type="familia">
+          <div class="loved-photo-box">
+            <img src="assets/img/gabi-perrito.jpg" alt="Gabi con su perrito" class="zoomable-img">
+            <span class="loved-badge pet-badge"><i class="fa-solid fa-paw"></i> Mascota Consentida</span>
+          </div>
+          <div class="loved-info">
+            <div class="loved-header-flex">
+              <h3>Mi Amor de Cuatro Patas</h3>
+              <span class="heart-icon-soft">🐾</span>
+            </div>
+            <p class="loved-phrase">"Nobleza y ternura en cada mirada."</p>
+            <p class="loved-text">
+              Mi compañero de paseos en carro, de tardes tranquilas y momentos de pura felicidad. Su pañuelito rojo y su mirada dulce alegran mi corazón todos los días.
+            </p>
+            <div class="loved-chips">
+              <span>#PetLove</span>
+              <span>#Perrito</span>
+              <span>#Fidelidad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. AMOR DE HOGAR Y GATITO -->
+        <div class="loved-card" data-loved-type="hermano familia">
+          <div class="loved-photo-box">
+            <img src="assets/img/familia-gato.jpg" alt="Mascota gatito y familia" class="zoomable-img">
+            <span class="loved-badge pet-badge"><i class="fa-solid fa-cat"></i> Amor en Casa</span>
+          </div>
+          <div class="loved-info">
+            <div class="loved-header-flex">
+              <h3>Ternura en Casa</h3>
+              <span class="heart-icon-soft">🐱</span>
+            </div>
+            <p class="loved-phrase">"El calor de un hogar lleno de amor por los animales."</p>
+            <p class="loved-text">
+              Los abrazos a nuestros consentidos de cuatro patas demuestran el cariño tan especial que compartimos en familia. Momentos sencillos que valen todo.
+            </p>
+            <div class="loved-chips">
+              <span>#Hogar</span>
+              <span>#Mascotas</span>
+              <span>#Familia</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Frase reflexiva final de la sección -->
+      <div class="sweet-quote-box">
+        <p class="sweet-quote">
+          "Tener a mi familia, a mi hermano, a mis verdaderas amistades y a mis peluditos es tener el tesoro más valioso del mundo."
+        </p>
+        <span class="sweet-author">— Gabriela Jiménez (GJ 💜)</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN INTERACTIVA: DEJA UN MENSAJE -->
+  <section class="section section-guestbook" id="mensajes">
+    <div class="container">
+      <div class="guestbook-clean-card">
+        <div class="section-heading mb-30">
+          <span class="sub-badge"><i class="fa-solid fa-envelope-open-text"></i> Muro de Mensajitos</span>
+          <h2>¡Déjale un Mensajito a Gabi!</h2>
+          <div class="soft-divider"></div>
+          <p>Escribe una dedicatoria, deséame éxitos en grado 11 o recomienda una serie bonita.</p>
+        </div>
+
+        <form id="guestbook-form" class="guestbook-clean-form">
+          <div class="form-grid-clean">
+            <div class="clean-field">
+              <label for="visitor-name">Tu nombre o apodo:</label>
+              <input type="text" id="visitor-name" placeholder="Ej. Tu nombre o amiga/amigo..." required>
+            </div>
+            <div class="clean-field">
+              <label for="message-type">Tipo de mensaje:</label>
+              <select id="message-type">
+                <option value="💜 Saludo con cariño">💜 Saludo con cariño</option>
+                <option value="✨ Dedicatoria de amistad">✨ Dedicatoria de amistad</option>
+                <option value="🎓 Éxitos en Grado 11">🎓 Éxitos en Grado 11</option>
+                <option value="🧠 Futura Psicóloga">🧠 Futura Psicóloga</option>
+                <option value="🎬 Recomendación de película/serie">🎬 Recomendación de película/serie</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="clean-field">
+            <label for="visitor-message">Tu mensaje:</label>
+            <textarea id="visitor-message" rows="3" placeholder="Escribe aquí tu mensajito bonito para Gabi..." required></textarea>
+          </div>
+
+          <div class="form-actions-clean">
+            <button type="button" class="btn btn-outline-lilac trigger-hearts">
+              <i class="fa-solid fa-heart"></i> Tirar corazones morados
+            </button>
+            <button type="submit" class="btn btn-soft-purple">
+              <i class="fa-solid fa-paper-plane"></i> Publicar Mensaje
+            </button>
+          </div>
+        </form>
+
+        <div class="posted-messages-wrapper">
+          <h4 class="posted-title"><i class="fa-solid fa-comments"></i> Mensajes en el muro:</h4>
+          <div id="messages-container" class="messages-clean-grid">
+            <div class="clean-comment">
+              <div class="comment-head">
+                <strong>Mariana P.</strong>
+                <span class="badge-msg-type">💜 Amistad</span>
+              </div>
+              <p>¡Qué linda te quedó tu página, Gabi! Te quiero un montón y sé que te va a ir súper bien en tu grado 11 y como psicóloga.</p>
+              <span class="comment-date">Hace unos momentos</span>
+            </div>
+
+            <div class="clean-comment">
+              <div class="comment-head">
+                <strong>Camilo</strong>
+                <span class="badge-msg-type">🎬 Recomendación</span>
+              </div>
+              <p>Tienes que verte la serie "Anne with an E" o maratonear "Gilmore Girls" en días fríos, ¡te va a encantar!</p>
+              <span class="comment-date">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTÓN FLOTANTE GJ PARA CORAZONES MORADOS -->
+  <button class="floating-gj-btn trigger-hearts" id="floating-gj" title="¡Haz clic para tirar corazones morados!">
+    <span class="float-pulse"></span>
+    <span class="float-name">GJ</span>
+    <span class="float-emoji">💜</span>
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">GJ</span>
+        <h3>Gabriela Jiménez</h3>
+        <p>Estudiante de grado 11 · Colegio María Currea Manrique · Futura Psicóloga 🧠💜</p>
+      </div>
+
+      <div class="footer-quicklinks">
+        <a href="#hero">Inicio</a>
+        <a href="#conoceme">Conóceme</a>
+        <a href="#gustos">Mis Gustos</a>
+        <a href="#peliculas-series">Películas & Series</a>
+        <a href="#gente-querida">Gente que Quiero</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>Hecho con mucho cariño y tonos morados bonitos para <strong>Gabi Jiménez</strong> · 2026</p>
+        <p class="tagline">"Paz mental, días frescos y gente que ilumina el alma." ✨</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal para ampliar fotos -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="Foto ampliada" class="lightbox-img" id="lightbox-img">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Script con motor de corazones y filtros -->
+  <script src="js/main.js"></script>
+</body>
+</html>
